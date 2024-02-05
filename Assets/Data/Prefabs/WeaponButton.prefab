@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4773961689624084221}
   - component: {fileID: 3930335792722534375}
   m_Layer: 5
-  m_Name: AmmoCount
+  m_Name: DamageText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 4504422146006706106}
   - component: {fileID: 6845843829821049969}
   - component: {fileID: 7602940524262798498}
+  - component: {fileID: 3259272742544301362}
   m_Layer: 5
   m_Name: WeaponButton
   m_TagString: Untagged
@@ -257,7 +258,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7622993879541579003}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -271,7 +272,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: 
+        m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -281,6 +282,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Weapon, Assembly-CSharp
+        m_MethodName: SetWeapon
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: b54c97db2283e254b821b2cd48e26a26, type: 2}
+          m_ObjectArgumentAssemblyTypeName: WeaponSO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3259272742544301362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3434658591599297123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7566c4467e065f3478a7ea34f504abea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerWeapon: {fileID: 0}
+  _targetWeapon: {fileID: 11400000, guid: b54c97db2283e254b821b2cd48e26a26, type: 2}
+  _damageText: {fileID: 3930335792722534375}
 --- !u!1 &4096700519181278980
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,7 +487,7 @@ GameObject:
   - component: {fileID: 7932706646957115417}
   - component: {fileID: 2643347839186916487}
   m_Layer: 5
-  m_Name: Ammo
+  m_Name: Damage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

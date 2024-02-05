@@ -1,18 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class WeaponButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Weapon _playerWeapon;
+    [SerializeField] private WeaponSO _targetWeapon;
+    [SerializeField] private TextMeshProUGUI _damageText;
+
+    public void EquipWeapon()
     {
-        
+        _playerWeapon.SetWeapon(_targetWeapon);
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        SetButtonView();
     }
+
+    private void SetButtonView()
+    {
+        int damage = 0;
+        switch (_targetWeapon.WeaponType)
+        {
+            case WeaponType.Pistol:
+                damage = _targetWeapon.Ammo.Damage;
+                break;
+            case WeaponType.Riffle:
+                damage = _targetWeapon.Ammo.Damage * 3;
+                break;
+        }
+
+        _damageText.text = damage.ToString();
+    }
+
+    
 }

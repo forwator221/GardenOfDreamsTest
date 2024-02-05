@@ -10,6 +10,8 @@ public class Weapon : MonoBehaviour
     private int _damage;
     private int _shootCount;
 
+    public int Damage { get;private set; }
+
     public void Initialize()
     {
         SetWeapon(_startWeapon);
