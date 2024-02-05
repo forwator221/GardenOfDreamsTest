@@ -7,11 +7,24 @@ public class Inventory : MonoBehaviour
     [SerializeField] private InventorySO _inventoryData;
 
     public List<InventoryItem> initialItems = new List<InventoryItem>();
+    public List<InventoryItem> itemsBase = new List<InventoryItem>();
     
     public void Initialize()
     {
         PrepareUI();
         PrepareInventoryData();
+    }
+
+    public void AddRandomItem()
+    {
+        int randomItem = Random.Range(0, itemsBase.Count);
+        InventoryItem item = itemsBase[randomItem];
+        item.ChangeQuantity(Random.Range(1, item.item.MaxStackSize));
+        int reminder = _inventoryData.AddItem(item.item, item.quantity);
+        if (reminder == 0)
+            return;
+        else 
+            item.quantity = reminder;
     }
 
     private void PrepareInventoryData()

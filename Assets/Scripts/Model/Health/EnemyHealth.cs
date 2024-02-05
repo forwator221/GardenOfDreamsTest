@@ -1,12 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
-
+using UnityEngine.Events;
 
 public class EnemyHealth : MonoBehaviour, IHealth
 {
     [SerializeField] private EnemyConfig _config;
     [SerializeField] private EnemyHealthView _healthView;
+
+    [SerializeField] UnityEvent OnDie;
 
     public IHealth Health { get; private set; }
 
@@ -26,5 +27,11 @@ public class EnemyHealth : MonoBehaviour, IHealth
     {
         Health.TakeDamage(damage);
         _healthView.Show(Value);
+    }
+
+    public void Die()
+    {
+        Initialize();
+        OnDie?.Invoke();
     }
 }

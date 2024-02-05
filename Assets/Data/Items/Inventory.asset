@@ -15,10 +15,10 @@ MonoBehaviour:
   items:
   - quantity: 1
     item: {fileID: 11400000, guid: b54c97db2283e254b821b2cd48e26a26, type: 2}
-  - quantity: 0
-    item: {fileID: 0}
-  - quantity: 50
+  - quantity: 25
     item: {fileID: 11400000, guid: cee39093543ce274f82ebfeda8a68c15, type: 2}
+  - quantity: 100
+    item: {fileID: 11400000, guid: 87f774e62e0e9244db76ded5fe08bdcd, type: 2}
   - quantity: 0
     item: {fileID: 0}
   - quantity: 0

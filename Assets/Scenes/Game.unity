@@ -1665,6 +1665,17 @@ MonoBehaviour:
     item: {fileID: 11400000, guid: cee39093543ce274f82ebfeda8a68c15, type: 2}
   - quantity: 50
     item: {fileID: 11400000, guid: 87f774e62e0e9244db76ded5fe08bdcd, type: 2}
+  - quantity: 25
+    item: {fileID: 11400000, guid: 87f774e62e0e9244db76ded5fe08bdcd, type: 2}
+  - quantity: 0
+    item: {fileID: 0}
+  - quantity: 25
+    item: {fileID: 11400000, guid: 87f774e62e0e9244db76ded5fe08bdcd, type: 2}
+  itemsBase:
+  - quantity: 25
+    item: {fileID: 11400000, guid: 87f774e62e0e9244db76ded5fe08bdcd, type: 2}
+  - quantity: 25
+    item: {fileID: 11400000, guid: cee39093543ce274f82ebfeda8a68c15, type: 2}
 --- !u!1001 &1121783454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2081,7 +2092,7 @@ GameObject:
   - component: {fileID: 1275207158}
   - component: {fileID: 1275207157}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Shoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2898,6 +2909,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _config: {fileID: 11400000, guid: 7d696dc734899764ba40da444d6e805b, type: 2}
   _healthView: {fileID: 1498972479}
+  OnDie:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1117172807}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: AddRandomItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1498972481
 MonoBehaviour:
   m_ObjectHideFlags: 0

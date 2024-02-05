@@ -14,10 +14,4 @@ public class Bootstrap : MonoBehaviour
         _enemy.Initialize();
         _inventory.Initialize();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -34,6 +34,6 @@ public class EnemyHealthView : MonoBehaviour, IHealthView
 
     private void Die()
     {
-
+        _enemy.Die();
     }
 }
