@@ -15,6 +15,12 @@ public class CharacterHealth : MonoBehaviour, IHealth
 
     public int Value => Health.Value;
 
+    public void Heal(int healAmount)
+    {
+        Health.Heal(healAmount);
+        _healthView.Show(Value);
+    }
+
     public void Initialize()
     {
         Health = new Health(_config.HealthMax, MaxValue, _healthView);

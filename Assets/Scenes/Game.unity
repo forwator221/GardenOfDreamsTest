@@ -338,11 +338,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7602940524262798498, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7602940524262798498, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7602940524262798498, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -355,7 +355,7 @@ PrefabInstance:
     - target: {fileID: 7602940524262798498, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1498972480}
+      objectReference: {fileID: 755324130}
     - target: {fileID: 7602940524262798498, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
@@ -370,15 +370,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7602940524262798498, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: TakeDamage
+      value: SetWeapon
       objectReference: {fileID: 0}
     - target: {fileID: 7602940524262798498, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: EnemyHealth, Assembly-CSharp
+      value: Weapon, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7602940524262798498, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_IntArgument
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7602940524262798498, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
@@ -389,8 +389,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7602940524262798498, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: 0bfbe0ee1e42a7c40b343d6d884cb400, type: 2}
+    - target: {fileID: 7602940524262798498, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: WeaponSO, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7622993879541579003, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
       propertyPath: m_Enabled
@@ -734,6 +738,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1364711027}
     m_Modifications:
+    - target: {fileID: 486420927746458307, guid: 40982dbdfa0dd5446b168b1aee1288fe, type: 3}
+      propertyPath: _activity
+      value: 
+      objectReference: {fileID: 1755296882}
+    - target: {fileID: 486420927746458307, guid: 40982dbdfa0dd5446b168b1aee1288fe, type: 3}
+      propertyPath: _activityButton
+      value: 
+      objectReference: {fileID: 1313570767}
     - target: {fileID: 557231694806292065, guid: 40982dbdfa0dd5446b168b1aee1288fe, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1024,6 +1036,7 @@ GameObject:
   - component: {fileID: 755324129}
   - component: {fileID: 755324128}
   - component: {fileID: 755324127}
+  - component: {fileID: 755324130}
   m_Layer: 5
   m_Name: PlayerPanel
   m_TagString: Untagged
@@ -1134,6 +1147,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: {fileID: 755324128}
   _healthView: {fileID: 755324127}
+--- !u!114 &755324130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755324123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 882efd82e3048a849aa580ca43469458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startWeapon: {fileID: 11400000, guid: b54c97db2283e254b821b2cd48e26a26, type: 2}
 --- !u!1 &790985007
 GameObject:
   m_ObjectHideFlags: 0
@@ -2162,13 +2188,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1498972480}
-        m_TargetAssemblyTypeName: EnemyHealth, Assembly-CSharp
-        m_MethodName: TakeDamage
-        m_Mode: 3
+      - m_Target: {fileID: 755324130}
+        m_TargetAssemblyTypeName: Weapon, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1498972480}
+          m_ObjectArgumentAssemblyTypeName: EnemyHealth, Assembly-CSharp
           m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2212,6 +2238,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275207155}
   m_CullTransparentMesh: 1
+--- !u!114 &1313570767 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 151942828532872669, guid: 40982dbdfa0dd5446b168b1aee1288fe, type: 3}
+  m_PrefabInstance: {fileID: 695914750}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1364711026
 GameObject:
   m_ObjectHideFlags: 0
@@ -3012,6 +3049,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575874804}
   m_CullTransparentMesh: 1
+--- !u!114 &1755296882 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4413083300098077691, guid: 40982dbdfa0dd5446b168b1aee1288fe, type: 3}
+  m_PrefabInstance: {fileID: 695914750}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1795203252
 GameObject:
   m_ObjectHideFlags: 0
@@ -3341,11 +3389,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7602940524262798498, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7602940524262798498, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7602940524262798498, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3358,7 +3406,7 @@ PrefabInstance:
     - target: {fileID: 7602940524262798498, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1498972480}
+      objectReference: {fileID: 755324130}
     - target: {fileID: 7602940524262798498, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
@@ -3373,19 +3421,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7602940524262798498, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: TakeDamage
+      value: SetWeapon
       objectReference: {fileID: 0}
     - target: {fileID: 7602940524262798498, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: EnemyHealth, Assembly-CSharp
+      value: Weapon, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7602940524262798498, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_IntArgument
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7602940524262798498, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: b54c97db2283e254b821b2cd48e26a26, type: 2}
+    - target: {fileID: 7602940524262798498, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: WeaponSO, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8770100839043537827, guid: 7c417580f5d48744094b5af73b8da7f9, type: 3}
       propertyPath: m_Pivot.x

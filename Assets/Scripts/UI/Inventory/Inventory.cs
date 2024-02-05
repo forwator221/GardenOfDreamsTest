@@ -86,11 +86,9 @@ public class Inventory : MonoBehaviour
         if (inventoryItem.isEmpty == true)
             return;
 
-        ItemSO item = inventoryItem.item;
+        ItemSO item = inventoryItem.item;        
 
-        float totalWeight = item.Weight * item.MaxStackSize;
-
-        _view.UpdateDescription(itemIndex, item.Name, item.Image, totalWeight, item.ActivityType);
+        _view.UpdateDescription(item);
     }
 
     private void Update()

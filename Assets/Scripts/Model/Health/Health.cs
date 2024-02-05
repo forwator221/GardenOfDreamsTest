@@ -17,6 +17,14 @@ public class Health : IHealth
 
     public int MaxValue { get; }
 
+    public void Heal(int healAmount)
+    {
+        if (Value + healAmount > MaxValue)
+            Value = MaxValue;
+        else
+            Value += healAmount;
+    }
+
     public void TakeDamage(int damage)
     {
         if (!IsAlive)

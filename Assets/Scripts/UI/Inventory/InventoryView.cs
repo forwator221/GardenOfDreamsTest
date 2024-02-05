@@ -100,11 +100,11 @@ public class InventoryView : MonoBehaviour
         OnDescriptionRequested?.Invoke(index);        
     }
 
-    public void UpdateDescription(int itemIndex, string name, Sprite image, float totalWeight, ActivityType activityType)
+    public void UpdateDescription(ItemSO item)
     {
         _itemDescriptionPanel.gameObject.SetActive(true);
-        ItemDescription itemDescription = _itemDescriptionPanel.GetComponentInChildren<ItemDescription>();
-        itemDescription.SetDescription(image, name, totalWeight);
+        ItemDescription itemDescription = _itemDescriptionPanel.GetComponentInChildren<ItemDescription>();        
+        itemDescription.SetDescription(item);
     }
 
     public void ResetAllItems()

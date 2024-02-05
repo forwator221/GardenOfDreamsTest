@@ -34,4 +34,9 @@ public class EnemyHealth : MonoBehaviour, IHealth
         Initialize();
         OnDie?.Invoke();
     }
+
+    public void Heal(int healAmount)
+    {
+        
+    }
 }
